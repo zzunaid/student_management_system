@@ -21,6 +21,12 @@ class StudentsController < ApplicationController
     end
   end
 
+  def show
+    validate_destroy_params
+    student = Student.find(params[:id])
+    render_response({ student: student }, { message: 'Student in this Roster successfully fetched!' }, :ok)
+  end
+
   def update
     validate_update_params
     student = Student.find(params[:id])
