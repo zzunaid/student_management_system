@@ -5,7 +5,7 @@
   <table class="table">
     <thead>
       <tr>
-         <td>Serial No</td> <td>Name</td> <td>Description</td><td>Total Students</td> <td>Created On</td><td>Co-ordinator</td><td></td>
+         <td>Serial No</td> <td>Name</td> <td>Description</td><td>Total Students</td> <td>Co-ordinator</td><td></td>
       </tr>
     </thead>
     <tbody>
@@ -13,8 +13,7 @@
           <td>{{$index + 1}}</td>
           <td>{{roster.name}}</td>
           <td>{{roster.description}}</td>
-          <td>{{roster.count}}</td>
-          <td>{{roster.created_at}}</td>
+          <td>{{roster.total_students}}</td>
           <td>{{roster.owner}}</td>
           <td><a class="show-info" href="#/rosters/{{roster.id}}">
                   View Students
