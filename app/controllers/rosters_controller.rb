@@ -1,7 +1,11 @@
 class RostersController < ApplicationController
   def index
     rosters = Roster.all
-    render_response({ rosters: rosters }, { message: 'Rosters successfully fetched!' }, :ok)
+    result = rosters.map do |roster|
+      roster_with_count = roster.attributes.merge(total_students: roster.students.count)
+      roster_with_count
+    end
+    render_response({ rosters: result }, { message: 'Rosters successfully fetched!' }, :ok)
   end
 
   def destroy

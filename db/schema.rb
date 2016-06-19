@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20160617101049) do
   enable_extension "plpgsql"
 
   create_table "rosters", force: :cascade do |t|
-    t.string   "name",                      null: false
-    t.boolean  "is_active",  default: true
+    t.string   "name",                       null: false
+    t.text     "description"
+    t.string   "owner"
+    t.boolean  "is_active",   default: true
     t.datetime "created_at"
     t.datetime "updated_at"
   end
