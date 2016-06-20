@@ -17,6 +17,8 @@ gem 'rails_param'
 
 gem 'faker', '~> 1.6', '>= 1.6.3'
 
+gem 'rails_12factor'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
