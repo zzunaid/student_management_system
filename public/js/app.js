@@ -1,6 +1,6 @@
-angular.module('F1FeederApp', [
-  'F1FeederApp.services',
-  'F1FeederApp.controllers',
+angular.module('StudentApp', [
+  'StudentApp.services',
+  'StudentApp.controllers',
   'ngRoute'
 ]).
 config(['$routeProvider', function($routeProvider) {

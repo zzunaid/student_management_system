@@ -1,3 +1,10 @@
+
+<div class="form-group col-sm-8 col-sm-offset-2">
+  <input type="text" class="form-control" id="usr" ng-model="nameFilter" placeholder="Search...">
+</div>
+
+<br>
+
 <section id="main">
 <div class="container">
 
@@ -21,7 +28,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="student in students">
+      <tr ng-repeat="student in students | filter: nameFilter">
           <td>{{student.first_name}}</td>
           <td>{{student.last_name}}</td>
           <td>{{student.email_id}}</td>
