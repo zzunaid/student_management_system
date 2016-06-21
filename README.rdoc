@@ -1,28 +1,35 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Steps to setup the project locally:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Clone the repository.
+
+* Installing Postgres:
+
+Download and Install Postgres 9.4 from http://postgresapp.com/
+
+* Creating Postgres users & extensions - We will create a user (geo_rails) with superuser, createdb permissions:
+
+$$ sudo su postgres $$ psql > create role sms with SUPERUSER CREATEDB LOGIN password '123456';
+
+* Run the following commands in project directory:
+
+$$ bundle install
+
+$$ rake db:create
+
+$$ rake db: migrate
+
+* To populate sample data, run the following rake task:
+
+$$ rake populate_sample_data[n]
+
+Here n is the number of students you want.
+
+
+
+Step to view the deployed project:
+
+* Visit https://evening-shelf-96900.herokuapp.com/
+
