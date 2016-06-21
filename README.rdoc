@@ -3,33 +3,31 @@
 Steps to setup the project locally:
 
 
-* Clone the repository.
+1. Clone the repository.
 
-* Installing Postgres:
+2. Installing Postgres:
 
-Download and Install Postgres 9.4 from http://postgresapp.com/
+* Download and Install Postgres 9.4 from http://postgresapp.com/
 
-* Creating Postgres users & extensions - We will create a user (geo_rails) with superuser, createdb permissions:
+3. Creating Postgres users & extensions - We will create a user (geo_rails) with superuser, createdb permissions:
 
-$$ sudo su postgres $$ psql > create role sms with SUPERUSER CREATEDB LOGIN password '123456';
+* $$ sudo su postgres $$ psql > create role sms with SUPERUSER CREATEDB LOGIN password '123456';
 
-* Run the following commands in project directory:
+4. Run the following commands in project directory:
 
-$$ bundle install
+* $$ bundle install
 
-$$ rake db:create
+* $$ rake db:create
 
-$$ rake db: migrate
+* $$ rake db: migrate
 
-* To populate sample data, run the following rake task:
+5. To populate sample data, run the following rake task:
 
-$$ rake populate_sample_data[n]
-
-Here n is the number of students you want.
+* $$ rake populate_sample_data[n]      (Here n is the number of students you want.)
 
 
 
-Step to view the deployed project:
+To view the deployed project:
 
 * Visit https://evening-shelf-96900.herokuapp.com/
 
