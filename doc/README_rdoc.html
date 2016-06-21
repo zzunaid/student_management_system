@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-README">README</a>
+    <li><a href="#label-Clone+the+repository.">Clone the repository.</a>
+    <li><a href="#label-Installing+Postgres-3A">Installing Postgres:</a>
+    <li><a href="#label-Creating+Postgres+users+-26+extensions+-+We+will+create+a+user+-28geo_rails-29+with+superuser-2C+createdb+permissions-3A">Creating Postgres users &amp; extensions - We will create a user (geo_rails) with superuser, createdb permissions:</a>
+    <li><a href="#label-Run+the+following+commands+in+project+directory-3A">Run the following commands in project directory:</a>
+    <li><a href="#label-To+populate+sample+data-2C+run+the+following+rake+task-3A">To populate sample data, run the following rake task:</a>
+    <li><a href="#label-To+view+the+deployed+project-3A">To view the deployed project:</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./README_rdoc.html">README</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.rdoc">
+
+<h2 id="label-README"><a href="README_rdoc.html">README</a><span><a href="#label-README">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Steps to setup the project locally:</p>
+
+<h4 id="label-Clone+the+repository.">Clone the repository.<span><a href="#label-Clone+the+repository.">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<h4 id="label-Installing+Postgres-3A">Installing Postgres:<span><a href="#label-Installing+Postgres-3A">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p>Download and Install Postgres 9.4 from <a
+href="http://postgresapp.com">postgresapp.com</a>/</p>
+</li></ul>
+
+<h4 id="label-Creating+Postgres+users+-26+extensions+-+We+will+create+a+user+-28geo_rails-29+with+superuser-2C+createdb+permissions-3A">Creating Postgres users &amp; extensions - We will create a user (geo_rails) with superuser, createdb permissions:<span><a href="#label-Creating+Postgres+users+-26+extensions+-+We+will+create+a+user+-28geo_rails-29+with+superuser-2C+createdb+permissions-3A">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p>$$ sudo su postgres $$ psql &gt; create role sms with SUPERUSER CREATEDB
+LOGIN password &#39;123456&#39;;</p>
+</li></ul>
+
+<h4 id="label-Run+the+following+commands+in+project+directory-3A">Run the following commands in project directory:<span><a href="#label-Run+the+following+commands+in+project+directory-3A">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p>$$ bundle install</p>
+</li><li>
+<p>$$ rake db:create</p>
+</li><li>
+<p>$$ rake db: migrate</p>
+</li></ul>
+
+<h4 id="label-To+populate+sample+data-2C+run+the+following+rake+task-3A">To populate sample data, run the following rake task:<span><a href="#label-To+populate+sample+data-2C+run+the+following+rake+task-3A">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p>$$ rake <a href="n">populate_sample_data</a>      (Here n is the number of
+students you want.)</p>
+</li></ul>
+
+<h4 id="label-To+view+the+deployed+project-3A">To view the deployed project:<span><a href="#label-To+view+the+deployed+project-3A">&para;</a> <a href="#top">&uarr;</a></span></h4>
+<ul><li>
+<p>Visit <a
+href="https://evening-shelf-96900.herokuapp.com">evening-shelf-96900.herokuapp.com</a>/</p>
+</li></ul>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
